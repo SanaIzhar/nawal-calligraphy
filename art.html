@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nawal's art</title>
+    <link rel="stylesheet" href="art.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body style="background-color:rgb(249, 255, 255)">
+    <header>
+   <div class="navbar">
+    <div class="thumbnail-img border">
+        <div class="thumbnail">
+        </div>
+    </div>
+    <div class="nav-home border" onclick="showAllSections()">Home</div>
+     <div class="nav-shop border" onclick="showAllSections()">Shop</div>
+     <div class="nav-contact border">
+  <p><a href="#" onclick="goToContact()">Contact</a></p>
+</div>
+    <div class="navbar1">
+    <div class="nav-login " onclick="fakeLogin()">
+        <i class="fa-solid fa-circle-user"></i>
+        <p>Log In</p>
+        
+    </div>
+    <div class="nav-cart" onclick="viewCart()">
+    🛒
+    <span id="cart-count">0</span>
+  </div>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_uVBDuQ21mL0FH-KQ6yqtFU0cD2CeAUvFW9FCRvXv7mNMeQ/viewform?usp=sharing&ouid=113436690122786170052" target="_blank">
+  <button class="order-btn" onclick="openOrderForm()">Order Now</button></a>
+
+<!-- Order Form Modal -->
+<div id="order-form" class="order-form hidden">
+  <div class="order-content">
+    <h2>Cash on Delivery - Order Form</h2>
+    <input type="text" placeholder="Your Name" id="customerName" required>
+    <input type="text" placeholder="Your Address" id="customerAddress" required>
+    <input type="tel" placeholder="Phone Number" id="customerPhone" required>
+    <button onclick="submitOrder()">Place Order</button>
+    <button onclick="closeOrderForm()" class="close-btn">Cancel</button>
+    <p id="order-status" class="order-status"></p>
+  </div>
+</div>
+   </div>
+    </div>
+    </header>
+     <h4 style="font:serif;">FREE SHIPPING on all orders over 4000. Worldwide shipping available.</h4>
+    <div class="shop-section border1">
+        <div class="box1 box">
+            <div class="box-content">
+            <div class="box-img" style="background-image: url('1.png');" alt="arabic"></div>
+         <h3>Arabic calligraphy</h3><br>
+         <p style="font-weight: bold;">RS 2000</p>
+          <button onclick="addToCart('1.png')">Add to Cart</button>
+  </div>
+</div>
+  <div class="box2 box">
+            <div class="box-content">
+            <div class="box-img" style="background-image: url('2.png');" alt="arabic"></div>
+         <h3>Ayatul Kursi,Hand-carved calligraphy</h3><br>
+         <p style="font-weight: bold;">RS 1500</p>
+         <button onclick="addToCart('2.png')">Add to Cart</button>
+  </div>
+</div>
+  <div class="box3 box">
+            <div class="box-content">
+            <div class="box-img" style="background-image: url('3.jpg');" alt="arabic"></div>
+         <h3>Handmade calligraphy painting on stone</h3><br>
+         <p style="font-weight: bold;">RS 1700</p>
+         <button onclick="addToCart('3.png')">Add to Cart</button>
+  </div>
+</div>
+</div>
+
+<div class="shop-section1">
+        <div class="box4 box1">
+            <div class="box-content1">
+            <div class="box-img1" style="background-image: url('4.png');" alt="arabic"></div>
+         <h3>Custom calligraphy for your heart and soul</h3><br>
+         <p style="font-weight: bold;">RS 2000</p>
+         <button onclick="addToCart('4.png')">Add to Cart</button>
+  </div>
+</div>
+  <div class="box5 box1">
+            <div class="box-content1">
+            <div class="box-img1" style="background-image: url('6.jpg');" alt="arabic"></div>
+         <h3>Qalam meets qeemat,the priceless art of divine calligraphy on stone</h3><br>
+         <p style="font-weight: bold;">RS 1800</p>
+         <button onclick="addToCart('6.png')">Add to Cart</button>
+  </div>
+</div>
+  <div class="box6 box1">
+            <div class="box-content1">
+            <div class="box-img1" style="background-image: url('7.jpg');" alt="arabic"></div>
+         <h3>When Allah's name is engraved in stone, it becomes eternal</h3><br>
+         <p style="font-weight: bold;">RS 1800</p>
+         <button onclick="addToCart('7.png')">Add to Cart</button>
+  </div>
+</div>
+</div>
+
+<div class="shop-section2">
+        <div class="box7 box2">
+            <div class="box-content2">
+            <div class="box-img2" style="background-image: url('5.jpg');" alt="arabic"></div>
+         <h3>Hand-carved stone calligraphy — beauty that never fades</h3><br>
+         <p style="font-weight: bold;">RS 2500</p>
+         <button onclick="addToCart('5.png')">Add to Cart</button>
+  </div>
+</div>
+  <div class="box8 box2">
+            <div class="box-content2">
+            <div class="box-img2" style="background-image: url('8.jpg');" alt="arabic"></div>
+         <h3>One-of-a-kind Islamic calligraphy art on natural stone</h3><br>
+         <p style="font-weight: bold;">RS 3000</p>
+         <button onclick="addToCart('8.png')">Add to Cart</button>
+  </div>
+</div>
+  <div class="box9 box2">
+            <div class="box-content2">
+            <div class="box-img2" style="background-image: url('9.png');" alt="arabic"></div>
+         <h3>Crafted on quality paper, written with love</h3><br>
+         <p style="font-weight: bold;">RS 700</p>
+         <button onclick="addToCart('9.png')">Add to Cart</button>
+  </div>
+</div>
+</div><br><br><br><br>
+<script>
+  let cart = [];
+
+  function addToCart(productName) {
+    cart.push(productName);
+    updateCartCount();
+    alert(productName + " added to cart!");
+  }
+
+  function updateCartCount() {
+    document.getElementById("cart-count").innerText = cart.length;
+  }
+
+  function viewCart() {
+    if (cart.length === 0) {
+      alert("Cart is empty");
+    } else {
+      alert("Your Cart:\n" + cart.join("\n"));
+    }
+  }
+</script>
+<script>
+  function goToContact() {
+    // Open Instagram page in a new tab
+    window.open("https://www.instagram.com/nawalfatima303", "_blank");
+  }
+</script>
+<script>
+  function showAllSections() {
+    document.querySelector('.shop-section').style.display = 'flex';
+    document.querySelector('.shop-section1').style.display = 'flex';
+    document.querySelector('.shop-section2').style.display = 'flex';
+  }
+
+  // Show all sections on page load
+  window.addEventListener('DOMContentLoaded', showAllSections);
+</script>
+<script>
+function fakeLogin() {
+  let username = prompt("Enter username:");
+  let password = prompt("Enter password:");
+  if (username === "user" && password === "pass") {
+    alert("Login successful!");
+  } else {
+    alert("Invalid credentials.");
+  }
+}
+</script>
+<script>
+  function openOrderForm() {
+    document.getElementById("order-form").classList.remove("hidden");
+  }
+
+  function closeOrderForm() {
+    document.getElementById("order-form").classList.add("hidden");
+  }
+
+  function submitOrder() {
+    const name = document.getElementById("customerName").value;
+    const address = document.getElementById("customerAddress").value;
+    const phone = document.getElementById("customerPhone").value;
+
+    if (name && address && phone) {
+      document.getElementById("order-status").innerText = 
+        "✅ Order placed successfully! Cash on Delivery confirmed.";
+      
+      // Optional: clear cart items here
+
+      setTimeout(() => {
+        closeOrderForm();
+        alert("Thank you for your order, " + name + "!");
+      }, 2000);
+    } else {
+      alert("Please fill all fields before placing the order.");
+    }
+  }
+</script>
+
+
+<footer>
+        <div class="foot-panel">
+            <div class="pages">
+               <pre><a>For all questions and enquiries, please email
+                 nawalfatima303@gmail.com
+     ©2025 by nawal Calligraphy® All rights reserved</a></pre>
+            </div>
+        </div>       
+    </footer>
+</body>
+</html>
