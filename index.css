@@ -1,0 +1,421 @@
+*{
+    margin: 0;
+    font-family: sans-serif;
+    border: border-box;
+}
+.navbar{
+    height: 125px;
+    background-color:white;
+    color:white;
+    padding: 15px 90px;
+    display:flex;
+    align-items: center;
+    cursor:pointer;
+    justify-content: center;
+    gap: 10px;
+}
+.thumbnail-img{
+  height: 100px;
+  width: 100px;
+  padding: 5px;
+  
+}
+.thumbnail{
+      background-image:url("logo1.jpg");
+    background-size:cover;
+    height:100px;
+    width:100px;
+}
+.border{
+   border:2px solid transparent;
+    transition: all 0.3s ease;
+}
+.border:hover{
+    border: 2px solid black; 
+  transform: scale(1.05);   /* zoom effect */
+}
+/*.nav-home{
+     color:black;
+    font:sans-serif;
+    background:white;
+    font-size:20px;
+    padding:0px 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+.nav-shop{
+     color:black;
+    font:sans-serif;
+    background:white;
+    font-size:20px;
+    padding:0px 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}*/
+.nav-home, .nav-shop {
+    color: black;
+  cursor: pointer;
+  padding: 10px;
+  display: inline-block;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.nav-home:hover,
+.nav-shop:hover {
+  background-color: #ddd;
+}
+
+.nav-contact{
+     color:black;
+    font:sans-serif;
+    background: white;
+    font-size:20px;
+    padding:0px 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.navbar1{
+    /*height: 125px;
+    background-color:white;
+    color:white;
+    padding: 15px 100px;
+    display:flex;
+    align-items: center;
+    cursor:pointer;
+    justify-content: end;*/
+    height: 80px;
+    background-color: white;
+    color: white;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* logo + links on left, icons on right */
+    gap: 40px;
+}
+.nav-login{
+ /*   color:black;
+    font-size: 20px;
+    margin-right: 50px;
+    display: flex;
+    padding:100px 90px;
+    justify-content:end;*/
+ color: black;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.nav-cart {
+  position: relative;
+  font-size: 24px;
+  margin-left: 20px;
+  cursor: pointer;
+  color: black;
+}
+
+#cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+.order-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.order-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.order-content {
+  background-color: #fff;
+  padding: 30px;
+  width: 350px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px gray;
+  text-align: center;
+}
+
+.order-content input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.order-content button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.order-status {
+  color: green;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+h4{
+    text-align: center;
+}
+.shop-section {
+    display: flex; /* To arrange boxes side-by-side */
+    justify-content: space-around; /* To distribute space between boxes */
+    flex-wrap: wrap; /* To allow boxes to wrap to the next line on smaller screens */
+    margin-top: 20px; /* Add some top margin for separation */
+}
+* {
+margin: 0;
+    padding:0;
+}
+.box {
+    width: 30%; 
+    max-width: 350px; /* Optional: Set a max-width for larger screens */
+    margin: 20px; /* Add some margin around each box */
+    border: 1px solid #eee; /* Optional: Add a subtle border */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Add a subtle shadow */
+    text-align: center; /* Center the content inside the box */
+    padding-bottom: 20px; /* Add some padding at the bottom */
+}
+.box-img {
+    height: 250px; /* Adjust this height as needed to fit your images */
+    background-size: contain; /* This is crucial: scales the image to fit without cropping */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the container */
+    width: 100%; /* Make sure the image container takes full width of its parent */
+    margin-bottom: 15px; /* Space between image and heading */
+   
+}
+.box-content {
+    /*padding: 20px;
+    text-align: center;
+    background: white; */
+     padding: 10px;
+}
+.box-content h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+.box {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Zoom-in on hover */
+.box:hover {
+  transform: scale(1.03);
+}
+
+/* Quick View overlay - hidden by default */
+.box::after {
+  content: "Quick View";
+  position: absolute;
+  bottom: -100%; /* Start hidden below */
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  transition: bottom 0.3s ease;
+}
+
+/* Slide up on hover */
+.box:hover::after {
+  bottom: 0;
+}
+button{
+color: white; background-color: black; padding: 10px 20px; border: none; 
+border-radius: 8px; cursor: pointer; display: block; margin: 20px auto;}
+.shop-section1 {
+    display: flex; /* To arrange boxes side-by-side */
+    justify-content: space-around; /* To distribute space between boxes */
+    flex-wrap: wrap; /* To allow boxes to wrap to the next line on smaller screens */
+    margin-top: 20px; /* Add some top margin for separation */
+}
+* {
+margin: 0;
+    padding:0;
+}
+.box1 {
+    width: 30%; 
+    max-width: 350px; /* Optional: Set a max-width for larger screens */
+    margin: 20px; /* Add some margin around each box */
+    border: 1px solid #eee; /* Optional: Add a subtle border */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Add a subtle shadow */
+    text-align: center; /* Center the content inside the box */
+    padding-bottom: 20px; /* Add some padding at the bottom */
+}
+.box-img1 {
+    height: 250px; /* Adjust this height as needed to fit your images */
+    background-size: contain; /* This is crucial: scales the image to fit without cropping */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the container */
+    width: 100%; /* Make sure the image container takes full width of its parent */
+    margin-bottom: 15px; /* Space between image and heading */
+   
+}
+.box-content1 {
+    /*padding: 20px;
+    text-align: center;
+    background: white; */
+     padding: 10px;
+}
+.box-content1 h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight:bold;
+}
+.box1 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Zoom-in on hover */
+.box1:hover {
+  transform: scale(1.03);
+}
+
+/* Quick View overlay - hidden by default */
+.box1::after {
+  content: "Quick View";
+  position: absolute;
+  bottom: -100%; /* Start hidden below */
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  transition: bottom 0.3s ease;
+}
+
+/* Slide up on hover */
+.box1:hover::after {
+  bottom: 0;
+}
+
+
+.shop-section2 {
+    display: flex; /* To arrange boxes side-by-side */
+    justify-content: space-around; /* To distribute space between boxes */
+    flex-wrap: wrap; /* To allow boxes to wrap to the next line on smaller screens */
+    margin-top: 20px; /* Add some top margin for separation */
+}
+* {
+margin: 0;
+    padding:0;
+}
+.box2 {
+    width: 30%; 
+    max-width: 350px; /* Optional: Set a max-width for larger screens */
+    margin: 20px; /* Add some margin around each box */
+    border: 1px solid #eee; /* Optional: Add a subtle border */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Add a subtle shadow */
+    text-align: center; /* Center the content inside the box */
+    padding-bottom: 20px; /* Add some padding at the bottom */
+}
+.box-img2 {
+    height: 250px; /* Adjust this height as needed to fit your images */
+    background-size: contain; /* This is crucial: scales the image to fit without cropping */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the container */
+    width: 100%; /* Make sure the image container takes full width of its parent */
+    margin-bottom: 15px; /* Space between image and heading */
+   
+}
+.box-content2 {
+    /*padding: 20px;
+    text-align: center;
+    background: white; */
+     padding: 10px;
+}
+.box-content2 h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight:bold;
+}
+.box2 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Zoom-in on hover */
+.box2:hover {
+  transform: scale(1.03);
+}
+
+/* Quick View overlay - hidden by default */
+.box2::after {
+  content: "Quick View";
+  position: absolute;
+  bottom: -100%; /* Start hidden below */
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  transition: bottom 0.3s ease;
+}
+
+/* Slide up on hover */
+.box2:hover::after {
+  bottom: 0;
+}
+footer {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 50px; 
+}
+
+.pages {
+    display: flex;
+    gap: 20px; 
+}
